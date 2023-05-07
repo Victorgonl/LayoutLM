@@ -10,12 +10,12 @@ from typing import Optional
 import numpy as np
 from datasets import ClassLabel, load_dataset, load_metric
 
-import layoutlmft.data.datasets.funsd
+import layoutlm.data.datasets.funsd
 import transformers
-from layoutlmft.data import DataCollatorForKeyValueExtraction
-from layoutlmft.data.data_args import DataTrainingArguments
-from layoutlmft.models.model_args import ModelArguments
-from layoutlmft.trainers import FunsdTrainer as Trainer
+from layoutlm.data import DataCollatorForKeyValueExtraction
+from layoutlm.data.data_args import DataTrainingArguments
+from layoutlm.models.model_args import ModelArguments
+from layoutlm.trainers import FunsdTrainer as Trainer
 from transformers import (
     AutoConfig,
     AutoModelForTokenClassification,
@@ -86,7 +86,7 @@ def main():
     # Set seed before initializing model.
     set_seed(training_args.seed)
 
-    datasets = load_dataset(os.path.abspath(layoutlmft.data.datasets.funsd.__file__))
+    datasets = load_dataset(os.path.abspath(layoutlm.data.datasets.funsd.__file__))
 
     if training_args.do_train:
         column_names = datasets["train"].column_names

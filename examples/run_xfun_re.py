@@ -8,14 +8,14 @@ import sys
 import numpy as np
 from datasets import ClassLabel, load_dataset
 
-import layoutlmft.data.datasets.xfun
+import layoutlm.data.datasets.xfun
 import transformers
 from packages.layoutlmft.layoutlmft import AutoModelForRelationExtraction
-from layoutlmft.data.data_args import XFUNDataTrainingArguments
-from layoutlmft.data.data_collator import DataCollatorForKeyValueExtraction
-from layoutlmft.evaluation import re_score
-from layoutlmft.models.model_args import ModelArguments
-from layoutlmft.trainers import XfunReTrainer
+from layoutlm.data.data_args import XFUNDataTrainingArguments
+from layoutlm.data.data_collator import DataCollatorForKeyValueExtraction
+from layoutlm.evaluation import re_score
+from layoutlm.models.model_args import ModelArguments
+from layoutlm.trainers import XfunReTrainer
 from transformers import (
     AutoConfig,
     AutoTokenizer,
@@ -81,7 +81,7 @@ def main():
     # Set seed before initializing model.
     set_seed(training_args.seed)
     datasets = load_dataset(
-        os.path.abspath(layoutlmft.data.datasets.xfun.__file__),
+        os.path.abspath(layoutlm.data.datasets.xfun.__file__),
         f"xfun.{data_args.lang}",
         additional_langs=data_args.additional_langs,
         keep_in_memory=True,
