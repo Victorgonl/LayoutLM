@@ -1,0 +1,17 @@
+# Micromamba environment file
+# https://marketplace.visualstudio.com/items?itemName=corker.vscode-micromamba
+
+name: layoutlmft
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10
+  - transformers=4.28
+  - datasets=2.12
+  - torch=1.13
+  - torchvision=0.14
+  - detectron2=0.6
+  - seqeval=1.2
+  - pytesseract=0.3

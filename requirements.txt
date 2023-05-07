@@ -1,0 +1,9 @@
+-f https://download.pytorch.org/whl/torch_stable.html
+-f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.7/index.html
+
+datasets==2.12
+torch==1.13
+torchvision==0.14
+transformers==4.28
+detectron2==0.6
+seqeval==1.2
