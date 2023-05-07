@@ -10,7 +10,7 @@ from datasets import ClassLabel, load_dataset
 
 import layoutlmft.data.datasets.xfun
 import transformers
-from layoutlmft import AutoModelForRelationExtraction
+from packages.layoutlmft.layoutlmft import AutoModelForRelationExtraction
 from layoutlmft.data.data_args import XFUNDataTrainingArguments
 from layoutlmft.data.data_collator import DataCollatorForKeyValueExtraction
 from layoutlmft.evaluation import re_score

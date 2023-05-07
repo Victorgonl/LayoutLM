@@ -21,8 +21,8 @@ from typing import Dict, Optional, Tuple, Union
 import numpy as np
 import tensorflow as tf
 
-from ...activations_tf import get_tf_activation
-from ...modeling_tf_outputs import (
+from transformers.activations_tf import get_tf_activation
+from transformers.modeling_tf_outputs import (
     TFBaseModelOutputWithPastAndCrossAttentions,
     TFBaseModelOutputWithPoolingAndCrossAttentions,
     TFMaskedLMOutput,
@@ -30,7 +30,7 @@ from ...modeling_tf_outputs import (
     TFSequenceClassifierOutput,
     TFTokenClassifierOutput,
 )
-from ...modeling_tf_utils import (
+from transformers.modeling_tf_utils import (
     TFMaskedLanguageModelingLoss,
     TFModelInputType,
     TFPreTrainedModel,
@@ -41,8 +41,8 @@ from ...modeling_tf_utils import (
     keras_serializable,
     unpack_inputs,
 )
-from ...tf_utils import shape_list, stable_softmax
-from ...utils import add_start_docstrings, add_start_docstrings_to_model_forward, logging, replace_return_docstrings
+from transformers.tf_utils import shape_list, stable_softmax
+from transformers.utils import add_start_docstrings, add_start_docstrings_to_model_forward, logging, replace_return_docstrings
 from .configuration_layoutlm import LayoutLMConfig
 
 

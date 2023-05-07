@@ -18,10 +18,11 @@ from typing import Any, List, Mapping, Optional
 
 from transformers import PretrainedConfig, PreTrainedTokenizer, TensorType
 
-from ... import is_torch_available
-from ...onnx import OnnxConfig, PatchingSpec
-from ...utils import logging
-from ..bert.configuration_bert import BertConfig
+from transformers import is_torch_available
+from transformers.onnx import OnnxConfig, PatchingSpec
+from transformers.utils import logging
+
+from transformers.models.bert.configuration_bert import BertConfig
 
 
 logger = logging.get_logger(__name__)

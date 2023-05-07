@@ -21,8 +21,8 @@ from typing import Dict, List, Optional, Tuple, Union
 
 import regex as re
 
-from ...tokenization_utils import AddedToken, PreTrainedTokenizer
-from ...tokenization_utils_base import (
+from  transformers.tokenization_utils import AddedToken, PreTrainedTokenizer
+from  transformers.tokenization_utils_base import (
     BatchEncoding,
     EncodedInput,
     PreTokenizedInput,
@@ -30,7 +30,7 @@ from ...tokenization_utils_base import (
     TextInputPair,
     TruncationStrategy,
 )
-from ...utils import PaddingStrategy, TensorType, add_end_docstrings, logging
+from  transformers.utils import PaddingStrategy, TensorType, add_end_docstrings, logging
 
 
 logger = logging.get_logger(__name__)

@@ -19,15 +19,15 @@ from typing import TYPE_CHECKING, Any, Mapping, Optional
 
 from packaging import version
 
-from ...configuration_utils import PretrainedConfig
-from ...onnx import OnnxConfig
-from ...onnx.utils import compute_effective_axis_dimension
-from ...utils import logging
+from  transformers.configuration_utils import PretrainedConfig
+from  transformers.onnx import OnnxConfig
+from  transformers.onnx.utils import compute_effective_axis_dimension
+from  transformers.utils import logging
 
 
 if TYPE_CHECKING:
-    from ...processing_utils import ProcessorMixin
-    from ...utils import TensorType
+    from  transformers.processing_utils import ProcessorMixin
+    from  transformers.utils import TensorType
 
 
 logger = logging.get_logger(__name__)

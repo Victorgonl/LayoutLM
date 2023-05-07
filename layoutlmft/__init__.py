@@ -4,14 +4,14 @@ from transformers import CONFIG_MAPPING, MODEL_FOR_TOKEN_CLASSIFICATION_MAPPING,
 from transformers.convert_slow_tokenizer import SLOW_TO_FAST_CONVERTERS, BertConverter, XLMRobertaConverter
 # from transformers.models.auto.modeling_auto import auto_class_factory
 
-from .models.layoutlmv2 import (
+from .layoutlmft.models.layoutlmv2 import (
     LayoutLMv2Config,
     LayoutLMv2ForRelationExtraction,
     LayoutLMv2ForTokenClassification,
     LayoutLMv2Tokenizer,
     LayoutLMv2TokenizerFast,
 )
-from .models.layoutxlm import (
+from .layoutlmft.models.layoutxlm import (
     LayoutXLMConfig,
     LayoutXLMForRelationExtraction,
     LayoutXLMForTokenClassification,

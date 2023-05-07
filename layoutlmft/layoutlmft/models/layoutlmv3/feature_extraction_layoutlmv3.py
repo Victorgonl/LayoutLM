@@ -21,9 +21,9 @@ from typing import List, Optional, Union
 import numpy as np
 from PIL import Image
 
-from ...feature_extraction_utils import BatchFeature, FeatureExtractionMixin
-from ...image_utils import IMAGENET_STANDARD_MEAN, IMAGENET_STANDARD_STD, ImageFeatureExtractionMixin, is_torch_tensor
-from ...utils import TensorType, is_pytesseract_available, logging, requires_backends
+from  transformers.feature_extraction_utils import BatchFeature, FeatureExtractionMixin
+from  transformers.image_utils import IMAGENET_STANDARD_MEAN, IMAGENET_STANDARD_STD, ImageFeatureExtractionMixin, is_torch_tensor
+from  transformers.utils import TensorType, is_pytesseract_available, logging, requires_backends
 
 
 # soft dependency

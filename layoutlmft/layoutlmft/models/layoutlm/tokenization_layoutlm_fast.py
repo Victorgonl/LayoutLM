@@ -15,8 +15,8 @@
 """ Tokenization class for model LayoutLM."""
 
 
-from ...utils import logging
-from ..bert.tokenization_bert_fast import BertTokenizerFast
+from transformers.utils import logging
+from transformers.models.bert.tokenization_bert_fast import BertTokenizerFast
 from .tokenization_layoutlm import LayoutLMTokenizer
 
 

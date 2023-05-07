@@ -14,6 +14,8 @@
 # limitations under the License.
 """ PyTorch LayoutLMv2 model."""
 
+import copy
+from dataclasses import dataclass
 import math
 from typing import Optional, Tuple, Union
 
@@ -22,17 +24,18 @@ import torch.utils.checkpoint
 from torch import nn
 from torch.nn import BCEWithLogitsLoss, CrossEntropyLoss, MSELoss
 
-from ...activations import ACT2FN
-from ...modeling_outputs import (
+
+from transformers.activations import ACT2FN
+from transformers.modeling_outputs import (
     BaseModelOutput,
     BaseModelOutputWithPooling,
     QuestionAnsweringModelOutput,
     SequenceClassifierOutput,
     TokenClassifierOutput,
 )
-from ...modeling_utils import PreTrainedModel
-from ...pytorch_utils import apply_chunking_to_forward
-from ...utils import (
+from transformers.modeling_utils import PreTrainedModel
+from transformers.pytorch_utils import apply_chunking_to_forward
+from transformers.utils import (
     add_start_docstrings,
     add_start_docstrings_to_model_forward,
     is_detectron2_available,
@@ -61,7 +64,7 @@ LAYOUTLMV2_PRETRAINED_MODEL_ARCHIVE_LIST = [
 
 
 @dataclass
-class RelationExtractionOutput(ModelOutput):
+class RelationExtractionOutput(BaseModelOutput):
     """
     Class for outputs of [`LayoutLMv2ForRelationExtraction`].
 

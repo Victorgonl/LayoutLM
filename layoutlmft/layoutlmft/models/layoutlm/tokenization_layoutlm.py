@@ -15,8 +15,8 @@
 """ Tokenization class for model LayoutLM."""
 
 
-from ...utils import logging
-from ..bert.tokenization_bert import BertTokenizer
+from transformers.utils import logging
+from transformers.models.bert.tokenization_bert import BertTokenizer
 
 
 logger = logging.get_logger(__name__)
